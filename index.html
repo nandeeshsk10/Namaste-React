@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width= <device-width> initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- this is internal styling using style taf inside head part -->
+    <style>
+      h1 {
+        color: blue;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>This is written using html</h1>
+
+    <div id="root"></div>
+
+    <!-- way of using javascript inside html using script tag -->
+    <!-- <script type="module">
+      const heading = document.createElement("h3");
+      heading.innerHTML = "This is written using javascript";
+
+      const body = document.getElementById("root");
+      body.appendChild(heading);
+    </script> -->
+
+    <!-- using react library inside our html file for a section using cdn link,
+    It should be heirarchically above the react code. -->
+    <!-- <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script> -->
+
+    <script src="App.js" type="module"></script>
+
+    <!-- this code written using react and enclosed within script tag -->
+    <!-- here h2 is a object not a html tag -->
+
+    <!--if there are 2 block of code where firstone is written using 
+        javascript within  script tag and second one is written using 
+        react within script tag,1st one will be replaced by second 
+        block of code -->
+    <!-- <script>
+      const header = React.createElement(
+        "h1",
+        {},
+        "this is written using react"
+      );
+      console.log("header->", header);
+
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      console.log("root->", root);
+
+      //   render converts object into html tag
+      root.render(header);
+    </script> -->
+  </body>
+</html>
